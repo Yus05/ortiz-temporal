@@ -1,0 +1,1307 @@
+<html class="scroll-smooth" lang="fr">
+  <head></head>
+  <body
+    class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    ```html
+
+    <style>
+      .floating-btn {
+        position: fixed;
+        right: 2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 100;
+      }
+      .floating-btn:hover {
+        transform: translateY(-5px) scale(1.05);
+      }
+      .btn-whatsapp {
+        bottom: 6.5rem;
+        background-color: #25d366;
+        color: white;
+      }
+      .btn-back-to-top {
+        bottom: 2rem;
+        background-color: #f77028;
+        color: white;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#dcd9d9",
+              "surface-tint": "#f77028",
+              "surface-container-highest": "#e4e2e1",
+              "tertiary-fixed-dim": "#ffb4a6",
+              "on-primary-fixed": "#3f0400",
+              "on-surface": "#1b1c1c",
+              "on-primary-container": "#5c0800",
+              secondary: "#4e6073",
+              "on-primary-fixed-variant": "#8e1300",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#36485b",
+              "surface-variant": "#e4e2e1",
+              tertiary: "#95483a",
+              "on-surface-variant": "#5b403b",
+              "tertiary-fixed": "#ffdad4",
+              error: "#ba1a1a",
+              "surface-bright": "#fbf9f8",
+              "inverse-primary": "#ffb4a5",
+              "secondary-container": "#cfe2f9",
+              "on-error-container": "#93000a",
+              "primary-container": "#fa8d52",
+              "primary-fixed": "#ffdad3",
+              "on-tertiary-fixed-variant": "#773125",
+              "primary-fixed-dim": "#ffb4a5",
+              "tertiary-container": "#d47a69",
+              "on-secondary-container": "#526478",
+              "on-secondary-fixed": "#091d2e",
+              "on-secondary": "#ffffff",
+              outline: "#8f706a",
+              primary: "#f77028",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#eae8e7",
+              "inverse-surface": "#303030",
+              "on-tertiary-fixed": "#3d0602",
+              background: "#fbf9f8",
+              "outline-variant": "#e3beb7",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#d1e4fb",
+              "secondary-fixed-dim": "#b5c8df",
+              "on-background": "#1b1c1c",
+              "surface-container": "#f0eded",
+              surface: "#fbf9f8",
+              "inverse-on-surface": "#f3f0f0",
+              "surface-container-low": "#f6f3f2",
+              "on-tertiary-container": "#53160d",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+              label: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .editorial-gradient {
+        background: linear-gradient(135deg, #f77028 0%, #fa8d52 100%);
+      }
+      .glass-nav {
+        background: rgba(251, 249, 248, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #f77028 transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        height: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #f77028;
+        border-radius: 10px;
+      }
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+    </style>
+    <!-- Header with Top Bar -->
+    <header class="fixed top-0 w-full z-50">
+      <div
+        class="bg-[#191c1e] text-slate-300 text-xs py-2.5 hidden md:block border-b border-white/5"
+      >
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+          <div class="flex items-center gap-8">
+            <a
+              class="flex items-center gap-2 hover:text-white transition-colors"
+              href="tel:0772755251"
+            >
+              <span class="material-symbols-outlined text-[16px]">phone</span>
+              <span class="font-medium tracking-wide">077 275 52 51</span>
+            </a>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[16px]"
+                >location_on</span
+              >
+              <span class="font-medium tracking-wide"
+                >Rue des Lattes 39, 1217 Meyrin</span
+              >
+            </div>
+          </div>
+          <div class="flex items-center gap-5">
+            <a
+              aria-label="Facebook"
+              class="hover:text-white transition-colors opacity-80 hover:opacity-100"
+              href="#"
+            >
+              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              aria-label="Instagram"
+              class="hover:text-white transition-colors opacity-80 hover:opacity-100"
+              href="#"
+            >
+              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.20 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              aria-label="LinkedIn"
+              class="hover:text-white transition-colors opacity-80 hover:opacity-100"
+              href="#"
+            >
+              <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- TopAppBar -->
+      <nav class="w-full glass-nav shadow-sm">
+        <div
+          class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4"
+        >
+          <div class="text-2xl font-black tracking-tighter text-slate-900">
+            Ortiz Speedy Moving
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              class="text-[#f77028] font-bold border-b-2 border-[#f77028] pb-1 font-inter tracking-tight font-medium"
+              href="#"
+              >Accueil</a
+            >
+            <a
+              class="text-slate-600 hover:text-[#f77028] transition-transform duration-300 hover:scale-105 font-inter tracking-tight font-medium"
+              href="#services"
+              >Services</a
+            >
+            <a
+              class="text-slate-600 hover:text-[#f77028] transition-transform duration-300 hover:scale-105 font-inter tracking-tight font-medium"
+              href="#tarifs"
+              >Tarifs</a
+            >
+            <a
+              class="text-slate-600 hover:text-[#f77028] transition-transform duration-300 hover:scale-105 font-inter tracking-tight font-medium"
+              href="#galerie"
+              >Galerie</a
+            >
+            <a
+              class="text-slate-600 hover:text-[#f77028] transition-transform duration-300 hover:scale-105 font-inter tracking-tight font-medium"
+              href="#contact"
+              >Contact</a
+            >
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              class="hidden lg:block font-inter tracking-tight font-medium text-slate-600"
+              href="tel:514-000-0000"
+              >514-000-0000</a
+            >
+            <button
+              class="editorial-gradient text-on-primary px-6 py-2.5 rounded-xl font-bold transition-all hover:scale-105 active:opacity-80 active:scale-95 shadow-sm"
+            >
+              Obtenir un Devis
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-screen flex items-center overflow-hidden pt-32"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Professional Sunrise Moving &amp; Storage truck in orange and white parked on a suburban street."
+            class="w-full h-full object-cover"
+            data-alt="A high-resolution, realistic 8k photo of a professional moving truck, painted in a clean orange and white color scheme, parked on a suburban street on a sunny day."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfo6acgCb-yORioM2H0sXP8HfUF5HxP28HsoF45KADPPoy5kNNwHiP_acfBBx31YornuqloOW_i9eMtSr0JrX1BLSs7iOWxLwNP7Ee3ijdwMuIkQdWM48DSojQhkBDtGgujuZJGFkJ8_AXegtDxy4mkxeLxwudcNcT73CvuQa2yyvNdHWEK1m0f4tMgNqLNIjQUZHN_JboCK1DuniuzzVZGfB6THF4vH9Go0_Hn725Emwvjekuk8iRU1RxM2GWJrOiky_Dc69q0m1D"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12"
+        >
+          <div class="space-y-8">
+            <h1
+              class="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] text-on-surface"
+            >
+              Simplifiez Votre
+              <span class="text-primary">Déménagement</span> avec Ortiz
+            </h1>
+            <p
+              class="text-xl md:text-2xl text-on-surface-variant font-light max-w-xl leading-relaxed"
+            >
+              Une équipe d'experts à Genève pour l'emballage, le montage, le
+              nettoyage et le stockage. Votre tranquillité est notre priorité.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <button
+                class="editorial-gradient text-on-primary px-10 py-5 rounded-xl text-lg font-bold shadow-lg transition-transform hover:scale-105"
+              >
+                Demandez un Devis Gratuit
+              </button>
+              <button
+                class="bg-surface-container-highest/50 backdrop-blur-md text-on-surface px-10 py-5 rounded-xl text-lg font-semibold border border-outline-variant/15 transition-all hover:bg-surface-container-highest"
+              >
+                Nos Services
+              </button>
+            </div>
+            <!-- Quick Stats -->
+            <div
+              class="flex items-center gap-6 pt-10 border-t border-outline-variant/15"
+            >
+              <a
+                class="group flex items-center gap-5 bg-black/40 backdrop-blur-xl px-8 py-4 rounded-full border border-white/20 shadow-2xl transition-all duration-300 hover:scale-105 hover:bg-black/50 hover:border-primary/50"
+                href="#"
+              >
+                <div class="flex items-center gap-4">
+                  <div class="bg-white p-1.5 rounded-lg shadow-inner">
+                    <img
+                      alt="Google Logo"
+                      class="w-6 h-6 object-contain"
+                      src="https://lh3.googleusercontent.com/aida/ADBb0uj3LOUcFOT-3NhfRIOpiBfUwKtbJmiyPwocZSzlGAa2f6wRw_RErio8JNLTuXU9QLZBHKMX4weM327GSwNvuowJRew_BhmGAv2nv9xacjwZcfuN2heCjp9iBbHtjvlbvwm6LvP5UmPKImvHohzB12ylPreQr2IM3wpLEJiaMpRovl3-VuTIfZ86sGJFbp_YRMmJ4eVX4vhhR9bw3Qxigq_1RAxGYGHwZRwGrDX68nLNlbljuSmY4A4ScqDlQ_CV41VbS8kHyygSpQ"
+                    />
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="flex gap-1 text-yellow-400 mb-0.5">
+                      <span
+                        class="material-symbols-outlined text-[24px] drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]"
+                        style="font-variation-settings: &quot;FILL&quot; 1"
+                        >star</span
+                      >
+                      <span
+                        class="material-symbols-outlined text-[24px] drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]"
+                        style="font-variation-settings: &quot;FILL&quot; 1"
+                        >star</span
+                      >
+                      <span
+                        class="material-symbols-outlined text-[24px] drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]"
+                        style="font-variation-settings: &quot;FILL&quot; 1"
+                        >star</span
+                      >
+                      <span
+                        class="material-symbols-outlined text-[24px] drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]"
+                        style="font-variation-settings: &quot;FILL&quot; 1"
+                        >star</span
+                      >
+                      <span
+                        class="material-symbols-outlined text-[24px] drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]"
+                        style="font-variation-settings: &quot;FILL&quot; 1"
+                        >star</span
+                      >
+                    </div>
+                    <p class="text-sm font-bold text-white tracking-tight">
+                      Note de 5/5 sur Google Reviews
+                    </p>
+                  </div>
+                </div>
+                <div class="h-10 w-[1px] bg-white/20 hidden sm:block"></div>
+                <div class="hidden sm:block text-left">
+                  <p
+                    class="text-[10px] font-black uppercase tracking-[0.2em] text-primary group-hover:text-white transition-colors"
+                  >
+                    Qualité Certifiée
+                  </p>
+                  <p class="text-[12px] font-medium text-white/70">
+                    Basé sur +600 avis
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Floating Quote Widget -->
+          <div class="hidden lg:flex items-center justify-center">
+            <div
+              class="bg-white bg-gradient-to-b from-white via-white to-primary/5 p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(247,112,40,0.15)] border border-white max-w-sm relative z-20"
+            >
+              <div class="flex items-center gap-4 mb-8">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-primary font-bold"
+                    >local_shipping</span
+                  >
+                </div>
+                <h3 class="text-2xl font-black text-slate-900 tracking-tight">
+                  Estimation Rapide
+                </h3>
+              </div>
+              <form class="space-y-6">
+                <div class="relative">
+                  <label
+                    class="text-[10px] font-black uppercase tracking-widest text-primary mb-2 block ml-1"
+                    >Départ (Genève/Région)</label
+                  >
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl"
+                      >location_on</span
+                    >
+                    <input
+                      class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-primary focus:ring-0 focus:bg-white transition-all pl-12 pr-4 py-4 text-sm font-medium"
+                      placeholder="Rue des Lattes..."
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="relative">
+                  <label
+                    class="text-[10px] font-black uppercase tracking-widest text-primary mb-2 block ml-1"
+                    >Destination</label
+                  >
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl"
+                      >near_me</span
+                    >
+                    <input
+                      class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-primary focus:ring-0 focus:bg-white transition-all pl-12 pr-4 py-4 text-sm font-medium"
+                      placeholder="Ville ou Code Postal"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <button
+                    class="w-full editorial-gradient text-on-primary py-5 rounded-2xl font-black text-lg shadow-[0_10px_20px_rgba(247,112,40,0.3)] hover:shadow-[0_15px_30px_rgba(247,112,40,0.4)] transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 group"
+                    type="button"
+                  >
+                    <span>Calculer mon Tarif</span>
+                    <span
+                      class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                      >arrow_forward</span
+                    >
+                  </button>
+                  <p
+                    class="text-center text-slate-400 text-xs mt-4 font-bold flex items-center justify-center gap-1"
+                  >
+                    <span class="material-symbols-outlined text-sm">bolt</span>
+                    Calcul gratuit en 30 secondes
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials Section -->
+      <section class="py-32 px-8 bg-surface">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center max-w-3xl mx-auto mb-20">
+            <span
+              class="text-primary font-bold tracking-widest uppercase text-sm block mb-4"
+              >Avis Clients</span
+            >
+            <h2
+              class="text-4xl md:text-6xl font-black tracking-tight text-on-surface mb-6"
+            >
+              Ce Qu'Ils Disent De Nous
+            </h2>
+            <p class="text-on-surface-variant text-xl font-light">
+              Découvrez les retours de nos clients satisfaits à Genève et dans
+              la région.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-surface-container-lowest rounded-3xl p-10 border border-outline-variant/10 shadow-xl hover:-translate-y-2 transition-transform duration-500"
+            >
+              <div class="flex text-primary mb-6">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <p
+                class="text-on-surface-variant text-lg leading-relaxed mb-8 italic"
+              >
+                "Une équipe ponctuelle, efficace et extrêmement professionnelle.
+                Mon déménagement de Meyrin à Genève s'est déroulé sans aucun
+                stress. Je recommande vivement !"
+              </p>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Sophie L."
+                  class="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKMUocunRRtg8-r2EacFGGF2ZKZoDBCz5nvy9mPMwVkj9ryaEXZ0pHlldBT2SCpVE9lwU5HUX0g3JbE4aGPuTvAdSZdthZ5Cn9WKyqIpWKObo7J_je6tTJoYkX2qVb-0KL9YfExxObgNeZBLrxJeuYub-ttUgLY72KUqxk8P5CrulNhJVpBDwVYeBXB-poxdgd_zTxI6weGXx3qbGqGmVsRRUJa92QctdmlIuAhs2Q3uoAzEUwUVFlXSVhpYdIjEgTwc9qXZveueas"
+                />
+                <div>
+                  <h4 class="font-bold text-on-surface">Sophie L.</h4>
+                  <p class="text-sm text-on-surface-variant">Particulier</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-surface-container-lowest rounded-3xl p-10 border border-outline-variant/10 shadow-xl hover:-translate-y-2 transition-transform duration-500"
+            >
+              <div class="flex text-primary mb-6">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <p
+                class="text-on-surface-variant text-lg leading-relaxed mb-8 italic"
+              >
+                "Le service de nettoyage après déménagement était impeccable.
+                Ils ont rendu l'appartement dans un état parfait pour l'état des
+                lieux. Un grand merci à toute l'équipe."
+              </p>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Marc D."
+                  class="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2dQ-CyMrmety0-7KQ03NoUdOeSw7iA_tDQLFJ4f4SKTDYoVQzbn6IEscqSrbmWd4JKoNVMPrGjYOAWS0KbX7vkzmu_cpr4K64-oTCP6ySW28EizjCbpQBtL6BZythu2iaXtsoc4Ey0DbvSjOPEIcXXBZcZU1Uq72QZd58t7xV0So4-g154xppHiSSjg4amYMEj8a8dFckorR9xy0EqHt5hvK7JECzDXoI7HgimynxT0puBT5-olbKBP4m4AmM8JNbq-J6LuiLDWz7"
+                />
+                <div>
+                  <h4 class="font-bold text-on-surface">Marc D.</h4>
+                  <p class="text-sm text-on-surface-variant">Professionnel</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-surface-container-lowest rounded-3xl p-10 border border-outline-variant/10 shadow-xl hover:-translate-y-2 transition-transform duration-500"
+            >
+              <div class="flex text-primary mb-6">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <p
+                class="text-on-surface-variant text-lg leading-relaxed mb-8 italic"
+              >
+                "Emballage méticuleux de nos objets fragiles. Rien n'a été cassé
+                pendant le trajet. Le personnel était très courtois et serviable
+                du début à la fin."
+              </p>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Claire &amp; Thomas"
+                  class="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOvL1kaWUjA_Mw2gM40t533aSmsvQ-0E3ZDZ0ufKJHVpJtuTZRve8XVzJUsIB7L3f2xj7enjCXTbWf30dq0_beQLfKcRJFola27BUSkWBmladVjsmkevm_SM_yboRgCSygjjIW6Oh_rgK9Co2AIitwQ3CYiQGYybItmLuiml4v_4NoTle9EUtyMFv2qQ3WGLS_RYjhOaGndV-rRNRZMdI_fPKkHfH3A8MsIgIRpAgo3ONSAsfS9-_GJHVMFNhBVR3xhNlHbB2dQhQA"
+                />
+                <div>
+                  <h4 class="font-bold text-on-surface">Claire &amp; Thomas</h4>
+                  <p class="text-sm text-on-surface-variant">Famille</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Key Services Section -->
+      <section
+        class="py-32 bg-surface-container-low overflow-hidden"
+        id="services"
+      >
+        <div class="max-w-7xl mx-auto px-8 mb-20">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-8"
+          >
+            <div class="max-w-2xl">
+              <span
+                class="text-primary font-bold tracking-widest uppercase text-sm block mb-4"
+                >Expertise Logistique</span
+              >
+              <h2
+                class="text-4xl md:text-6xl font-black tracking-tight text-on-surface leading-none"
+              >
+                Nos Services <br />Sur Mesure
+              </h2>
+            </div>
+            <div class="flex items-center gap-6">
+              <p
+                class="text-on-surface-variant max-w-xs text-lg leading-relaxed font-light hidden md:block"
+              >
+                De la planification à l'exécution, nous gérons chaque étape avec
+                une précision chirurgicale.
+              </p>
+              <div class="flex gap-3">
+                <button
+                  class="w-12 h-12 rounded-full border-2 border-outline-variant/30 flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-all hover:border-primary shadow-sm"
+                  onclick="
+                    document
+                      .getElementById('services-carousel')
+                      .scrollBy({ left: -400, behavior: 'smooth' })
+                  "
+                >
+                  <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <button
+                  class="w-12 h-12 rounded-full border-2 border-outline-variant/30 flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-all hover:border-primary shadow-sm"
+                  onclick="
+                    document
+                      .getElementById('services-carousel')
+                      .scrollBy({ left: 400, behavior: 'smooth' })
+                  "
+                >
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full relative md:pl-[max(2rem,calc((100vw-80rem)/2))] pl-8"
+        >
+          <div
+            class="flex overflow-x-auto gap-6 pb-12 pr-8 snap-x snap-mandatory custom-scrollbar"
+            id="services-carousel"
+          >
+            <!-- Déménagement -->
+            <div
+              class="snap-start shrink-0 w-[85vw] md:w-[calc((100vw-4rem)/3.5)] min-w-[300px] max-w-[420px] group relative bg-surface-container-lowest rounded-3xl p-10 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border-t-4 border-transparent hover:border-primary"
+            >
+              <div class="mb-12 relative z-10">
+                <span
+                  class="material-symbols-outlined text-primary-container text-5xl mb-6 block group-hover:scale-110 transition-transform origin-left"
+                  data-icon="local_shipping"
+                  >local_shipping</span
+                >
+                <h3 class="text-2xl font-bold mb-4">Déménagement</h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                  Prévoyez-vous de déménager prochainement ? Notre équipe assure
+                  un transport fluide et efficace de vos biens les plus
+                  précieux.
+                </p>
+              </div>
+              <div class="absolute -bottom-4 -right-4 z-0">
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-9xl opacity-10 group-hover:opacity-20 transition-all duration-500"
+                  >local_shipping</span
+                >
+              </div>
+            </div>
+            <!-- Emballage -->
+            <div
+              class="snap-start shrink-0 w-[85vw] md:w-[calc((100vw-4rem)/3.5)] min-w-[300px] max-w-[420px] group relative bg-surface-container-lowest rounded-3xl p-10 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border-t-4 border-transparent hover:border-primary"
+            >
+              <div class="mb-12 relative z-10">
+                <span
+                  class="material-symbols-outlined text-primary text-5xl mb-6 block group-hover:scale-110 transition-transform origin-left"
+                  data-icon="inventory_2"
+                  >inventory_2</span
+                >
+                <h3 class="text-2xl font-bold mb-4">Emballage</h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                  Des années d'expérience pour protéger vos biens. Nous
+                  utilisons des matériaux de haute qualité pour garantir zéro
+                  dommage.
+                </p>
+              </div>
+              <div class="absolute bottom-0 right-0 p-8 z-0">
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-8xl opacity-10 group-hover:opacity-20 transition-opacity"
+                  >package_2</span
+                >
+              </div>
+            </div>
+            <!-- Nettoyage -->
+            <div
+              class="snap-start shrink-0 w-[85vw] md:w-[calc((100vw-4rem)/3.5)] min-w-[300px] max-w-[420px] group relative bg-surface-container-lowest rounded-3xl p-10 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border-t-4 border-transparent hover:border-primary"
+            >
+              <div class="mb-12 relative z-10">
+                <span
+                  class="material-symbols-outlined text-primary-container text-5xl mb-6 block group-hover:scale-110 transition-transform origin-left"
+                  data-icon="cleaning_services"
+                  >cleaning_services</span
+                >
+                <h3 class="text-2xl font-bold mb-4">Nettoyage</h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                  Services de haute qualité pour fin de bail ou après travaux.
+                  Nous rendons votre ancien ou nouveau foyer impeccable.
+                </p>
+              </div>
+              <div class="absolute bottom-0 right-0 p-8 z-0">
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-8xl opacity-10 group-hover:opacity-20 transition-opacity"
+                  >mop</span
+                >
+              </div>
+            </div>
+            <!-- Garde-meuble -->
+            <div
+              class="snap-start shrink-0 w-[85vw] md:w-[calc((100vw-4rem)/3.5)] min-w-[300px] max-w-[420px] group relative bg-surface-container-lowest rounded-3xl p-10 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border-t-4 border-transparent hover:border-primary"
+            >
+              <div class="mb-12 relative z-10">
+                <span
+                  class="material-symbols-outlined text-primary text-5xl mb-6 block group-hover:scale-110 transition-transform origin-left"
+                  data-icon="warehouse"
+                  >warehouse</span
+                >
+                <h3 class="text-2xl font-bold mb-4">Garde-meuble</h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                  Solutions de stockage sécurisées à court ou long terme. Vos
+                  biens sont protégés dans nos installations surveillées.
+                </p>
+              </div>
+              <div class="absolute bottom-0 right-0 p-8 z-0">
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-8xl opacity-10 group-hover:opacity-20 transition-opacity"
+                  >inventory</span
+                >
+              </div>
+            </div>
+            <!-- Démontage/Remontage -->
+            <div
+              class="snap-start shrink-0 w-[85vw] md:w-[calc((100vw-4rem)/3.5)] min-w-[300px] max-w-[420px] group relative bg-surface-container-lowest rounded-3xl p-10 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border-t-4 border-transparent hover:border-primary"
+            >
+              <div class="mb-12 relative z-10">
+                <span
+                  class="material-symbols-outlined text-primary-container text-5xl mb-6 block group-hover:scale-110 transition-transform origin-left"
+                  data-icon="build"
+                  >build</span
+                >
+                <h3 class="text-2xl font-bold mb-4">Démontage/Remontage</h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                  Montage et démontage professionnels de tous vos meubles. Nous
+                  gérons le mobilier complexe avec l'outillage adapté.
+                </p>
+              </div>
+              <div class="absolute bottom-0 right-0 p-8 z-0">
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-8xl opacity-10 group-hover:opacity-20 transition-opacity"
+                  >home_repair_service</span
+                >
+              </div>
+            </div>
+            <!-- Transport d'Objets Lourds -->
+            <div
+              class="snap-start shrink-0 w-[85vw] md:w-[calc((100vw-4rem)/3.5)] min-w-[300px] max-w-[420px] group relative bg-surface-container-lowest rounded-3xl p-10 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border-t-4 border-transparent hover:border-primary"
+            >
+              <div class="mb-12 relative z-10">
+                <span
+                  class="material-symbols-outlined text-primary text-5xl mb-6 block group-hover:scale-110 transition-transform origin-left"
+                  data-icon="fitness_center"
+                  >fitness_center</span
+                >
+                <h3 class="text-2xl font-bold mb-4">
+                  Transport d'Objets Lourds
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                  Spécialistes du transport de pianos, coffres-forts et œuvres
+                  d'art. Équipement spécifique pour une sécurité maximale.
+                </p>
+              </div>
+              <div class="absolute bottom-0 right-0 p-8 z-0">
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-8xl opacity-10 group-hover:opacity-20 transition-opacity"
+                  >weight</span
+                >
+              </div>
+            </div>
+            <!-- Nettoyage Fin de Bail -->
+            <div
+              class="snap-start shrink-0 w-[85vw] md:w-[calc((100vw-4rem)/3.5)] min-w-[300px] max-w-[420px] group relative bg-surface-container-lowest rounded-3xl p-10 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border-t-4 border-transparent hover:border-primary"
+            >
+              <div class="mb-12 relative z-10">
+                <span
+                  class="material-symbols-outlined text-primary-container text-5xl mb-6 block group-hover:scale-110 transition-transform origin-left"
+                  data-icon="dry_cleaning"
+                  >dry_cleaning</span
+                >
+                <h3 class="text-2xl font-bold mb-4">Nettoyage Fin de Bail</h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                  Garantie de remise en état avec présence lors de l'état des
+                  lieux. Un nettoyage en profondeur conforme aux régies.
+                </p>
+              </div>
+              <div class="absolute bottom-0 right-0 p-8 z-0">
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-8xl opacity-10 group-hover:opacity-20 transition-opacity"
+                  >housekeeping</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- How It Works Section -->
+      <section class="py-32 px-8 bg-surface">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2
+              class="text-4xl md:text-6xl font-black tracking-tight text-on-surface mb-6"
+            >
+              Comment ça marche
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+            <div
+              class="hidden md:block absolute top-12 left-[16%] right-[16%] h-[2px] bg-outline-variant/30 z-0"
+            ></div>
+            <!-- Step 1 -->
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="w-24 h-24 rounded-full bg-surface-container-lowest border-4 border-surface shadow-xl flex items-center justify-center mb-8 relative"
+              >
+                <span
+                  class="absolute -top-6 -left-6 w-16 h-16 bg-[#f77028] text-white rounded-full font-black flex items-center justify-center text-3xl shadow-xl z-20 border-4 border-white"
+                  >1</span
+                >
+                <span class="material-symbols-outlined text-4xl text-primary"
+                  >edit_document</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-on-surface">
+                Estimation &amp; Planification
+              </h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Demandez un devis gratuit en ligne ou par téléphone. Nous
+                planifions ensemble chaque détail de votre déménagement.
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="w-24 h-24 rounded-full bg-surface-container-lowest border-4 border-surface shadow-xl flex items-center justify-center mb-8 relative"
+              >
+                <span
+                  class="absolute -top-6 -left-6 w-16 h-16 bg-[#f77028] text-white rounded-full font-black flex items-center justify-center text-3xl shadow-xl z-20 border-4 border-white"
+                  >2</span
+                >
+                <span class="material-symbols-outlined text-4xl text-primary"
+                  >inventory_2</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-on-surface">
+                Emballage &amp; Chargement
+              </h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Notre équipe d'experts arrive avec tout le matériel nécessaire
+                pour emballer et charger vos biens en toute sécurité.
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="w-24 h-24 rounded-full bg-surface-container-lowest border-4 border-surface shadow-xl flex items-center justify-center mb-8 relative"
+              >
+                <span
+                  class="absolute -top-6 -left-6 w-16 h-16 bg-[#f77028] text-white rounded-full font-black flex items-center justify-center text-3xl shadow-xl z-20 border-4 border-white"
+                  >3</span
+                >
+                <span class="material-symbols-outlined text-4xl text-primary"
+                  >local_shipping</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-on-surface">
+                Transport &amp; Installation
+              </h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Nous transportons vos biens vers votre nouvelle destination et
+                les installons selon vos besoins.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Us Section -->
+      <section class="py-32 px-8 bg-surface">
+        <div
+          class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center"
+        >
+          <div class="relative lg:w-7/12">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                alt="A high-resolution, photorealistic image of a person carrying a cardboard moving box, smiling happily and looking satisfied with their successful move. Bright, modern indoor setting. High-quality photography style."
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFwEjWFw7yYUyCKkteEACzew0J60ipNK-TXN_7IdFH-g2JNqgM8OV2JBtvd-DRNeoGNar2MxD5TFn8FbrD3aHEDIhmFiHNmujCqj9oSUsU3h7--q0O-tp0iRYfIeZExI1ukqJfyDqkA6GcdR9CerB3vHn6I8sL5MqxEOAAdUCEJfCQND8TbuHZedWJZDFMOhxvwI0akBzAKXPdYQn_cQN8BJxjcuShmWEAN4nVQbrSOsrbkDAZTS0ZrQKL0ueybSFRfQNGrqkE7xCB"
+              />
+            </div>
+          </div>
+          <div class="space-y-8 lg:w-5/12">
+            <span
+              class="text-primary font-bold tracking-widest uppercase text-sm block"
+              >À Propos de Nous</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-black tracking-tight text-on-surface leading-tight"
+            >
+              L'Excellence du Mouvement à Genève
+            </h2>
+            <div
+              class="space-y-6 text-on-surface-variant text-lg leading-relaxed font-light"
+            >
+              <p>
+                Ortiz Speedy Moving est né d'une passion pour le service client
+                et d'une vision moderne de la logistique domestique. Basés à
+                Meyrin, nous intervenons dans tout le canton de Genève avec une
+                réactivité inégalée.
+              </p>
+              <p>
+                Notre mission est simple : transformer une étape souvent
+                stressante en une expérience sereine. Que vous soyez un
+                particulier ou une entreprise, nous apportons le même niveau de
+                rigueur et de soin à chaque carton transporté.
+              </p>
+            </div>
+            <button
+              class="bg-[#f77028] text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all"
+            >
+              En savoir plus
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Section -->
+      <section class="py-32 px-8 bg-surface-container-low" id="faq">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <span
+              class="text-primary font-bold tracking-widest uppercase text-sm block mb-4"
+              >FAQ</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-black tracking-tight text-on-surface"
+            >
+              Questions Fréquentes
+            </h2>
+          </div>
+          <div class="space-y-4">
+            <!-- Question 1 -->
+            <details
+              class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <summary
+                class="flex justify-between items-center font-bold cursor-pointer p-6 text-lg text-on-surface focus:outline-none"
+              >
+                <span>Comment obtenir un devis ?</span>
+                <span
+                  class="transition-transform duration-300 group-open:rotate-180 material-symbols-outlined text-primary"
+                  >expand_more</span
+                >
+              </summary>
+              <div
+                class="text-on-surface-variant font-light leading-relaxed px-6 pb-6"
+              >
+                Vous pouvez obtenir un devis gratuit et rapide en utilisant
+                notre formulaire d'estimation en ligne, en nous appelant
+                directement ou en nous envoyant un message. Nous vous répondrons
+                dans les plus brefs délais avec une proposition détaillée.
+              </div>
+            </details>
+            <!-- Question 2 -->
+            <details
+              class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <summary
+                class="flex justify-between items-center font-bold cursor-pointer p-6 text-lg text-on-surface focus:outline-none"
+              >
+                <span>Proposez-vous des services d'emballage ?</span>
+                <span
+                  class="transition-transform duration-300 group-open:rotate-180 material-symbols-outlined text-primary"
+                  >expand_more</span
+                >
+              </summary>
+              <div
+                class="text-on-surface-variant font-light leading-relaxed px-6 pb-6"
+              >
+                Oui, nous proposons un service d'emballage complet. Notre équipe
+                utilise des matériaux de protection de haute qualité pour
+                garantir la sécurité de vos biens, des objets fragiles aux
+                meubles encombrants.
+              </div>
+            </details>
+            <!-- Question 3 -->
+            <details
+              class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <summary
+                class="flex justify-between items-center font-bold cursor-pointer p-6 text-lg text-on-surface focus:outline-none"
+              >
+                <span>Quels sont vos tarifs ?</span>
+                <span
+                  class="transition-transform duration-300 group-open:rotate-180 material-symbols-outlined text-primary"
+                  >expand_more</span
+                >
+              </summary>
+              <div
+                class="text-on-surface-variant font-light leading-relaxed px-6 pb-6"
+              >
+                Nos tarifs sont transparents et dépendent de plusieurs facteurs
+                : le volume à déménager, la distance, la complexité d'accès et
+                les services additionnels (emballage, nettoyage). Contactez-nous
+                pour une estimation personnalisée et sans engagement.
+              </div>
+            </details>
+            <!-- Question 4 -->
+            <details
+              class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <summary
+                class="flex justify-between items-center font-bold cursor-pointer p-6 text-lg text-on-surface focus:outline-none"
+              >
+                <span>Couvrez-vous toute la Suisse ?</span>
+                <span
+                  class="transition-transform duration-300 group-open:rotate-180 material-symbols-outlined text-primary"
+                  >expand_more</span
+                >
+              </summary>
+              <div
+                class="text-on-surface-variant font-light leading-relaxed px-6 pb-6"
+              >
+                Bien que notre siège soit à Genève et que nous intervenions
+                principalement dans la région, nous pouvons organiser des
+                déménagements dans d'autres cantons suisses. N'hésitez pas à
+                nous contacter pour discuter de votre projet.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="py-24 px-8 bg-[#f77028] text-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-6">
+            Prêt pour votre prochain chapitre ?
+          </h2>
+          <p class="text-xl font-light mb-10 text-white/90">
+            Demandez votre devis gratuit aujourd'hui et laissez notre équipe
+            s'occuper du reste en toute sérénité.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <button
+              class="bg-white text-[#f77028] px-10 py-4 rounded-xl text-lg font-bold shadow-lg hover:scale-105 transition-transform duration-300"
+            >
+              Commencer Maintenant
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Footer Section -->
+      <footer
+        class="bg-[#191c1e] text-white pt-20 pb-8 px-8 border-t border-white/5"
+      >
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Logo & Description -->
+          <div class="space-y-6">
+            <div class="text-2xl font-black tracking-tighter text-white">
+              Ortiz Speedy Moving
+            </div>
+            <p class="leading-relaxed text-slate-400">
+              Votre partenaire de confiance pour des déménagements sans stress à
+              Genève et ses environs. Expertise, soin et ponctualité garantis.
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-bold text-white">Liens Rapides</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#services"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#tarifs"
+                  >Tarifs</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#faq"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Our Services -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-bold text-white">Nos Services</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#"
+                  >Déménagement</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#"
+                  >Emballage</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#"
+                  >Nettoyage</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#"
+                  >Garde-meuble</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#"
+                  >Démontage/Remontage</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#"
+                  >Transport d'Objets Lourds</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#f77028] transition-colors text-slate-400"
+                  href="#"
+                  >Nettoyage Fin de Bail</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-bold text-white">Contact</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#f77028] mt-1"
+                  >location_on</span
+                >
+                <span class="text-slate-400"
+                  >Rue des Lattes 39,<br />1217 Meyrin</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-[#f77028]"
+                  >phone</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <button
+        aria-label="Back to top"
+        class="fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#f77028] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 invisible translate-y-10 hover:scale-110 active:scale-95 focus:outline-none"
+        id="back-to-top"
+      >
+        <span class="material-symbols-outlined text-3xl"
+          >keyboard_arrow_up</span
+        >
+      </button>
+      <script>
+        const backToTopBtn = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.classList.remove(
+              "opacity-0",
+              "invisible",
+              "translate-y-10",
+            );
+            backToTopBtn.classList.add(
+              "opacity-100",
+              "visible",
+              "translate-y-0",
+            );
+          } else {
+            backToTopBtn.classList.add(
+              "opacity-0",
+              "invisible",
+              "translate-y-10",
+            );
+            backToTopBtn.classList.remove(
+              "opacity-100",
+              "visible",
+              "translate-y-0",
+            );
+          }
+        });
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      </script>
+      <a
+        aria-label="Chat with us on WhatsApp"
+        class="fixed bottom-[6.5rem] right-8 z-50 group flex items-center gap-3"
+        href="https://wa.me/41772755251"
+        target="_blank"
+      >
+        <span
+          class="bg-white text-on-surface text-sm font-bold py-2 px-4 rounded-lg shadow-xl opacity-0 -translate-x-4 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"
+        >
+          Chat with us
+        </span>
+        <div
+          class="w-14 h-14 bg-[#f77028] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-primary/20"
+        >
+          <span class="material-symbols-outlined text-3xl">chat</span>
+        </div>
+      </a>
+    </main>
+  </body>
+</html>
